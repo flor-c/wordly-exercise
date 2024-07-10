@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /*background-color: cadetblue;*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #003049;
+}
+
+header {
+    text-align: center;
+}
+
+.game-name {
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: whitesmoke;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.info-bar{
+    padding-bottom: 20px;
+}
+
+.loader {
+    text-align: center;
+    font-size: 33px;
+    animation: spin 1.5s linear infinite;
+}
+
+/* rotates clockwise indefinitely */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    max-width: 350px;
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 8px;
+    column-gap: 8px;
+}
+
+.letter-box {
+    height: 60px;
+    width: 60px;
+    font-size: 45px;
+    text-transform: uppercase;
+    border: 2px solid #003049;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ivory;
+}
+
+.correct {
+    background-color: green;
+    color: whitesmoke;
+}
+
+.close {
+    background-color: darkorange;
+    color: whitesmoke;
+}
+
+.wrong {
+    background-color: #888;
+    color: whitesmoke;
+}
+
+.invalid {
+    animation: flash 2s;
+}
+
+/* flashes red border and then fades back to gray */
+@keyframes flash {
+    5% {
+        border-color: crimson;
+    }
+
+    100% {
+        border-color: black;
+    }
+}
